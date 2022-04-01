@@ -3,8 +3,8 @@
 
         Thread mainThread = Thread.CurrentThread;
 
-Thread threadOne = new Thread(() => CountDown("TimerOne"));
-Thread threadTwo = new Thread(() => CountUp("TimerTwo"));
+Thread threadOne = new Thread(() => CountDown("Timer One"));
+Thread threadTwo = new Thread(() => CountUp("Timer Two"));
 
 threadOne.Start();
 threadTwo.Start();
@@ -22,22 +22,22 @@ threadTwo.Start();
 
         for (int i = 10; i >= 0; i--)
         {
-            Console.WriteLine("Timer #1 : " + i + " seconds");
+            Console.WriteLine($"{name} : " + i + " seconds");
             Thread.Sleep(1000);
 
         }
-        Console.WriteLine("Timer #1 is complete.");
+        Console.WriteLine($"{name} is complete.");
     }
 
     static void CountUp(String name)
     {
         for (int i = 0; i <= 10; i++)
         {
-            Console.WriteLine("Timer #2 : " + i + " seconds");
+            Console.WriteLine($"{name} : " + i + " seconds");
             Thread.Sleep(1000);
 
         }
-        Console.WriteLine("Timer #2 is complete.");
+        Console.WriteLine($"{name} is complete.");
 
     }
 
